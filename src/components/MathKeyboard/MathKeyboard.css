@@ -1,0 +1,111 @@
+.math-keyboard {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #16213e;
+}
+
+.keyboard-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #0f3460;
+  background: #16213e;
+  color: #8892b0;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #0f3460;
+  color: #64ffda;
+  border-color: #64ffda;
+}
+
+.keyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 6px;
+}
+
+.key-btn {
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 0.85rem;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  cursor: pointer;
+  transition: all 0.12s;
+  min-height: 42px;
+}
+
+.key-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.key-constant {
+  background: #16213e;
+  color: #ccd6f6;
+  border-color: #0f3460;
+}
+.key-constant:hover:not(:disabled) { background: #0f3460; color: #e6f1ff; }
+
+.key-variable {
+  background: #1e2d5e;
+  color: #82aaff;
+  border-color: #2d4085;
+}
+.key-variable:hover:not(:disabled) { background: #2d4085; color: #c3e6fb; }
+
+.key-operator {
+  background: #1a1a2e;
+  color: #ffcb6b;
+  border-color: #2a2a4a;
+}
+.key-operator:hover:not(:disabled) { background: #2a2a4a; color: #ffe082; }
+
+.key-function {
+  background: #0d2b45;
+  color: #89ddff;
+  border-color: #1a4a6a;
+}
+.key-function:hover:not(:disabled) { background: #1a4a6a; color: #b0eeff; }
+
+.key-calculus {
+  background: #1a0a2e;
+  color: #c792ea;
+  border-color: #3a0a5e;
+  font-weight: 600;
+}
+.key-calculus:hover:not(:disabled) { background: #3a0a5e; color: #e0a0ff; }
+
+.key-control {
+  background: #2a1a1a;
+  color: #f07178;
+  border-color: #4a1a1a;
+}
+.key-control:hover:not(:disabled) { background: #4a1a1a; color: #ff8a90; }
+
+.keyboard-hint {
+  font-size: 0.72rem;
+  color: #495670;
+  text-align: center;
+  padding-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .keyboard-grid { grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 5px; }
+  .key-btn { min-height: 48px; font-size: 0.9rem; padding: 10px 6px; }
+  .tab-btn { padding: 7px 12px; font-size: 0.8rem; }
+}

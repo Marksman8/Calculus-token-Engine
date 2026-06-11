@@ -1,0 +1,113 @@
+.steps-empty {
+  color: #495670;
+  text-align: center;
+  padding: 32px;
+}
+
+.steps-container { display: flex; flex-direction: column; gap: 12px; }
+
+.steps-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2d3d;
+}
+
+.steps-count { font-size: 0.9rem; font-weight: 700; color: #64ffda; }
+.steps-subtitle { font-size: 0.72rem; color: #495670; }
+
+.steps-list { display: flex; flex-direction: column; gap: 8px; }
+
+.step-card {
+  background: #0d1117;
+  border: 1px solid #1e2d3d;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.step-card:hover { border-color: #0f3460; }
+.step-card.expanded { border-color: #64ffda; }
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.step-number { font-size: 0.72rem; color: #495670; min-width: 48px; }
+
+.rule-badge {
+  background: #0f3460;
+  color: #64ffda;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.step-toggle { margin-left: auto; color: #495670; font-size: 0.65rem; }
+
+.step-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.arrow { color: #64ffda; font-size: 1rem; }
+
+.step-detail { margin-top: 10px; padding-top: 10px; border-top: 1px solid #1e2d3d; }
+
+.rule-description {
+  font-size: 0.78rem;
+  color: #8892b0;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.step-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .step-comparison { grid-template-columns: 1fr; }
+}
+
+.step-before, .step-after {
+  background: #0a0e14;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.step-before label, .step-after label {
+  display: block;
+  font-size: 0.68rem;
+  color: #495670;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.final-answer {
+  background: #001a16;
+  border: 1px solid #64ffda;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.final-answer label {
+  display: block;
+  font-size: 0.72rem;
+  color: #64ffda;
+  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

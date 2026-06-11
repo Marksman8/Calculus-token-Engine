@@ -1,0 +1,100 @@
+.trace-empty { color: #495670; padding: 12px; }
+
+.trace-container { display: flex; flex-direction: column; gap: 16px; }
+
+.pipeline-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding: 10px;
+  background: #0a0e14;
+  border-radius: 8px;
+}
+
+.pipeline-stage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.pipeline-stage.idle { color: #2d3a50; }
+.pipeline-stage.done { color: #64ffda; background: #001a16; }
+.pipeline-stage.error { color: #f07178; background: #1a0008; }
+
+.stage-icon { font-size: 1rem; }
+.stage-label { flex: 1; }
+.stage-done { color: #64ffda; font-size: 0.8rem; }
+.stage-error { color: #f07178; font-size: 0.8rem; }
+
+.pipeline-arrow {
+  font-size: 0.9rem;
+  padding-left: 20px;
+  line-height: 1;
+}
+.pipeline-arrow.idle { color: #1e2d3d; }
+.pipeline-arrow.done { color: #0f3460; }
+
+.trace-io { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+@media (max-width: 480px) {
+  .trace-io { grid-template-columns: 1fr; }
+  .trace-stats { flex-wrap: wrap; gap: 10px; }
+}
+
+.trace-block {
+  background: #0a0e14;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 60px;
+}
+
+.trace-block label {
+  display: block;
+  font-size: 0.68rem;
+  color: #495670;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.trace-error-msg { grid-column: 1 / -1; }
+.trace-error-msg label { display: block; font-size: 0.68rem; color: #f07178; margin-bottom: 4px; }
+.trace-error-msg code { font-size: 0.78rem; color: #f07178; }
+
+.trace-stats {
+  display: flex;
+  gap: 16px;
+  padding: 10px 14px;
+  background: #0a0e14;
+  border-radius: 8px;
+}
+
+.stat { display: flex; flex-direction: column; gap: 2px; }
+.stat-label { font-size: 0.65rem; color: #495670; text-transform: uppercase; }
+.stat-value { font-size: 1rem; font-weight: 700; color: #ccd6f6; }
+.stat-value.ok { color: #64ffda; }
+.stat-value.fail { color: #f07178; }
+
+.rule-debugger h4 { font-size: 0.78rem; color: #8892b0; margin: 0 0 8px; }
+
+.rule-list { display: flex; flex-direction: column; gap: 4px; max-height: 200px; overflow-y: auto; }
+
+.rule-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: #0a0e14;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.rule-step { color: #495670; min-width: 24px; }
+.rule-name { color: #64ffda; font-weight: 600; min-width: 140px; }
+.rule-desc { color: #8892b0; }

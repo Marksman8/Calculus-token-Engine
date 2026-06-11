@@ -1,0 +1,84 @@
+.ast-panel {
+  background: #0d1117;
+  border-radius: 10px;
+  padding: 14px;
+  height: 100%;
+  overflow: auto;
+}
+
+.ast-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #495670;
+}
+
+.ast-empty .hint { font-size: 0.78rem; color: #2d3a50; }
+
+.panel-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.panel-tabs .tab-btn {
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid #1e2d3d;
+  background: #0d1117;
+  color: #8892b0;
+  font-size: 0.72rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+.panel-tabs .tab-btn.active {
+  background: #0f3460;
+  color: #64ffda;
+  border-color: #64ffda;
+}
+
+.panel-content { overflow: auto; }
+
+/* Tree view */
+.tree-node { font-size: 0.82rem; line-height: 1.6; }
+.tree-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background 0.1s;
+}
+.tree-label.has-children { cursor: pointer; }
+.tree-label:hover { background: #161b22; }
+
+.tree-toggle { font-size: 0.65rem; color: #495670; width: 12px; }
+.node-type { font-weight: 600; font-family: "JetBrains Mono", monospace; }
+.node-value { color: #8892b0; margin-left: 4px; font-size: 0.78rem; }
+
+.tree-child { display: flex; align-items: flex-start; gap: 4px; }
+.child-key { font-size: 0.7rem; color: #495670; margin-top: 4px; white-space: nowrap; }
+
+/* JSON view */
+.json-view {
+  font-size: 0.75rem;
+  color: #8892b0;
+  font-family: "JetBrains Mono", monospace;
+  overflow: auto;
+  max-height: 400px;
+  background: #0a0e14;
+  padding: 12px;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+/* Graph view */
+.graph-svg {
+  width: 100%;
+  background: #0a0e14;
+  border-radius: 6px;
+  min-height: 200px;
+}
